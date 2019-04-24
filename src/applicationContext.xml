@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--name是一个名字，我们可以通过name来获取对象-->
+    <!--class是被管理的对象的全包名，spring会通过这个全包名来创建对象-->
+    <!--lazy-init：延迟加载，那么在创建容器的时候并不会对该bean对象创建-->
+    <bean name="user" class="com.lls.bean.User" lazy-init="true" scope="singleton">
+        <property name="userId" value="1"/>
+    </bean>
+</beans>
